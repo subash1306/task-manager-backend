@@ -18,6 +18,10 @@ mongoose.connect(process.env.MONGO_URI)
 
 
 // 5. Routes go here (to be added later)
+app.get('/', (req, res) => {
+  res.send('🚀 Backend is running!');
+});
+
 app.use('/api/auth', require('./routes/auth'));      // Placeholder for auth routes
 app.use('/api/tasks', require('./routes/tasks'));    // Placeholder for task routes
 
